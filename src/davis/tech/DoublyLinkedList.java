@@ -33,10 +33,8 @@ public class DoublyLinkedList<T> {
 		}
 		public void setNext(Node<T> e) {
 			this.next = e;
-		}
-		
+		}	
 	}
-	
 	//instance variables of the circularlyLinkedList
 		private Node<T>head;//reference to the element stored at this node
 		private Node<T>tail; //references the last node in the list
