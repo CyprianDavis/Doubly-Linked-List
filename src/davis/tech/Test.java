@@ -15,21 +15,15 @@ public class Test {
 	list.addLast("DAVIS");
 	list.addLast("TUSUUBIRA");
 	list.addLast("ANNET");
+	list.addLast("ISAAC E");
 	
-	list.printList();
+	System.out.println(list.getFirst());
 	
-	list.removeFirst();
+	System.out.println(list.getLast());
+	
 	System.out.println();
-	list.printList();
 	
-	list.removeLast();
-	System.out.println();
 	list.printList();
-	
-		
-		
-		
-		
 		
 	
 	}

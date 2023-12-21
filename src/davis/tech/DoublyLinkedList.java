@@ -74,21 +74,13 @@ public class DoublyLinkedList<T> {
 		 */
 		public void addFirst(T e) {
 			Node<T> node = new Node<T>(e,null,null);
-			//check if the list
-			if(head == null) {
-				head = node;
-				tail = node;
-				head.setPrev(null);
-				tail.setNext(null);
-			}
-			else {
-				node.setNext(head);
-				//new Node next becomes head
-				head.setPrev(node);
-				//new Node becomes head
-				head = node;
-			}
-			size++;
+			if(isEmpty())
+				head = tail = node;
+				tail.setPrev(node);
+			node.setNext(head);
+			//new node becomes head
+			head = node;
+			size ++;//increament by 1
 		}
 			
 		/**
@@ -97,19 +89,13 @@ public class DoublyLinkedList<T> {
 		 */
 		public void addLast(T e) {
 			Node<T> node = new Node<>(e,null,null);
-			if(head == null) {
-				head = node;
-				tail = node;
-				head.setPrev(null);
-				tail.setNext(null);
-				
-			}
-			else {
-				tail.setNext(node);
-				node.setPrev(tail);
-				//new Node becomes tail
-				tail = node;
-			}
+			if(isEmpty())
+				head =tail= node;
+				tail.setPrev(node);
+			tail.setNext(node);
+			node.setPrev(tail);
+			//new node becomes tail
+			tail = node;
 			size++;
 			}
 		/**
